@@ -55,7 +55,7 @@ public class StudentController {
     }
 
     @PostMapping("/students/filter")
-    public List<Student> getStudentByGenderAndTechnology(@Param("gender") String gender,@Param("technology") String technology){
+    public List<Student> getStudentByGenderAndTechnology(@RequestParam("gender") String gender,@RequestParam("technology") String technology){
         return studentService.getStudentByGenderAndTechnology(gender,technology);
     }
 
